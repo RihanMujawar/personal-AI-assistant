@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd "$(dirname "$0")/voice_assistant"
-pip install -r ../requirements.txt
+cd "$(dirname "$0")"
+source venv/bin/activate
 python main.py

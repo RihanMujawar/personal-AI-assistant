@@ -1,15 +1,17 @@
 
 import os
+import subprocess
 from utils.tts import speak
 
 def shutdown_pc():
     speak("Shutting down")
-    os.system("shutdown /s /t 5")
+    subprocess.run(["shutdown", "-h", "now"])
 
 def restart_pc():
     speak("Restarting")
-    os.system("shutdown /r /t 5")
+    subprocess.run(["reboot"])
 
 def sleep_pc():
     speak("Sleeping now")
-    os.system("rundll32.exe powrprof.dll,SetSuspendState Sleep")
+    subprocess.run(["systemctl", "suspend"])
+

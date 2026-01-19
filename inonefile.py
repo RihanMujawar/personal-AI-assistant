@@ -305,7 +305,7 @@ def search_on_chrome(query):
 def save_response_to_pdf(response_text):
     try:
         now = datetime.datetime.now()
-        filename = now.strftime("AI_Response_%Y%m%d_%H%M%S.pdf")
+        filename = now.strftime("AI_Response_%Y%m%d_S.pdf")
         pdf = FPDF()
         pdf.add_page()
         pdf.set_font("Arial", size=12)
